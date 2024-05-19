@@ -1,0 +1,62 @@
+@import"https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap";
+.sidebar{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F0F4F9;
+    min-height: 100vh;
+    padding: 25px 15px;
+}
+.sidebar img{
+    width: 20px;
+}
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.sidebar .new-chat{
+    display: inline-flex;
+    margin-top: 50px;
+    align-items: center;
+    gap: 10px;
+    background-color: #e6eaf1;
+    padding: 10px 15px;
+    color: gray;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Outfit';
+}
+.recent{
+    display: flex;
+    flex-direction: column;
+}
+.recent .recent-title{
+    margin: 30px 0 15px;
+    font-weight: bold;
+    font-family: 'Outfit';
+}
+.sidebar .recent-entry{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    background-color: transparent;
+    padding: 10px;
+    padding-right: 40px;
+    color: gray;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Outfit';
+    transition: .3s;
+}
+.sidebar .recent-entry p{
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recent .recent-entry:hover{
+    background-color: #e6eaf1;
+}
