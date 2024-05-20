@@ -26,7 +26,6 @@
     margin: auto;
 }
 .main-container .great{
-    margin: 50px 0;
     font-size: 56px;
     color: #c4c7c5;
     font-weight: 500;
@@ -53,6 +52,7 @@
     border-radius: 10px;
     position: relative;
     cursor: pointer;
+    transition: .5s;
 }
 .main-container .cards .card p{
     color: #585858;
@@ -69,8 +69,47 @@
     background-color: #fff;
     padding: 5px;
     border-radius: 50%;
-    transition: .5s;
 }
 .main-container .cards .card:hover{
     background-color:#dfe4ea ;
+}
+.main-botton{
+    position: absolute;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+}
+.searching-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.searching-btn input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+.s-btn-images{
+    display: flex;
+    gap: 5px;
+}
+
+.s-btn-images img{
+    width: 24px;
+}
+
+.main-botton p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 300;
+    margin: 15px auto;
+    font-family: "Outfit";
 }
