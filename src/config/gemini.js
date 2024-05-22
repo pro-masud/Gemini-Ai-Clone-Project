@@ -56,7 +56,8 @@ import {
       history: [
       ],
     });
-  
+    
+    
     const result = await chatSession.sendMessage(proment);
     console.log(result.response.text());
   }
