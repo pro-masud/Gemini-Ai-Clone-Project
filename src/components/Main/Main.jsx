@@ -13,28 +13,46 @@ const Main = () => {
             <img src="https://dev-masud-rana.netlify.app/image/user.png" alt="user-image" />
         </div>
         <div className="main-container">
-          <div className="great">
-            <p><span>Hello, Masud.</span></p>
-            <p>How can I help you today?</p>
-          </div>
-          <div className="cards">
-            <div className="card">
-              <p>Suggest beautiful places to see on an upcoming road trip</p>
-              <img src={assets.compass_icon} alt="compass" />
+          {
+            !showResult ?
+            <>
+            <div className="great">
+              <p><span>Hello, Masud.</span></p>
+              <p>How can I help you today?</p>
             </div>
-            <div className="card">
-              <p>Briefly summarize this concept: urban planning</p>
-              <img src={assets.bulb_icon} alt="compass" />
+            <div className="cards">
+              <div className="card">
+                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <img src={assets.compass_icon} alt="compass" />
+              </div>
+              <div className="card">
+                <p>Briefly summarize this concept: urban planning</p>
+                <img src={assets.bulb_icon} alt="compass" />
+              </div>
+              <div className="card">
+                <p>Brainstorm team bonding activities for our work retreat</p>
+                <img src={assets.message_icon} alt="compass" />
+              </div>
+              <div className="card">
+                <p>Tell me about React js and React native</p>
+                <img src={assets.code_icon} alt="compass" />
+              </div>
             </div>
-            <div className="card">
-              <p>Brainstorm team bonding activities for our work retreat</p>
-              <img src={assets.message_icon} alt="compass" />
+            </>
+            : <div className="result">
+              <div className="result-title">
+                <img src={assets.user_icon} alt="" />
+                <p>{recentPrompt}</p>
+              </div>
+              <div className="result-showing">
+                <div className="gemini-icon">
+                  <img src={assets.gemini_icon} alt="" />
+                </div>
+               <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+              </div>
             </div>
-            <div className="card">
-              <p>Tell me about React js and React native</p>
-              <img src={assets.code_icon} alt="compass" />
-            </div>
-          </div>
+        }
+          
           <div className="main-botton">
             <div className="searching-btn">
               <input onChange={(e) => setInput(e.target.value)} value={input} type="search" placeholder='Enter Your Question?' />

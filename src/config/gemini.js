@@ -60,6 +60,7 @@ import {
     
     const result = await chatSession.sendMessage(proment);
     console.log(result.response.text());
+    return result.response.text();
   }
   
   export default run;

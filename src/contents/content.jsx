@@ -14,7 +14,16 @@ const ContentProvider = (proment) => {
 
 
     const onSent = async (proment) => {
-        await run(input);
+
+        setResultData("");
+        setLoading(true);
+        setRecentPrompt(input);
+        setShowResult(true);
+
+        const response = await run(input);
+        setResultData(response);
+        setLoading(true);
+        setInput("");
     }
 
     const ContextValue = {
